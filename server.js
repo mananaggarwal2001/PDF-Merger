@@ -1,8 +1,9 @@
 const express = require('express')
 const path = require('path')
 const multer = require('multer')
-const {mergedpdfs} = require('./merge') // using the destructuring in the javascript
+const { mergedpdfs } = require('./merge') // using the destructuring in the javascript
 const upload = multer({ dest: 'uploads/' })
+const fs = require('fs')
 const app = express()
 const port = 3000
 app.use(express.static('public'))
@@ -23,7 +24,30 @@ app.post('/merge', upload.array('pdfs', 100), async (req, res, next) => {
     for (let i of arrayOfFiles) {
         d = await mergedpdfs(path.join(__dirname, i.path))
     }
-    res.sendFile(path.join(__dirname, `/public/${d}.pdf`))
+    res.sendFile(path.join(__dirname, `/public/${d}.pdf`), (err) => {
+        console.log(err); // if the error is thrown in the given function which the file being not able to send..
+    })
+
+    fs.readdir('./public', (err, files) => {
+        // console.log(files); // this will give me list of files in the form of the array.
+        for (let file of files) {
+            fs.unlink(path.join(__dirname, `/public/${file}`), err => {
+                if (err) {
+                    console.log(err);
+                }
+            })
+        }
+    })
+    fs.readdir('./uploads', (err, files) => {
+        // console.log(files); // this will give me list of files in the form of the array.
+        for (let file of files) {
+            fs.unlink(path.join(__dirname, `/uploads/${file}`), err => {
+                if (err) {
+                    console.log(err);
+                }
+            })
+        }
+    })
     // res.redirect("http://localhost:3000/static/merged.pdf")
     // res.send({ data: req.files })
 })
