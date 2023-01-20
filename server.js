@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const multer = require('multer')
-const mergedpdfs = require('./merge').mergedpdfs
+const {mergedpdfs} = require('./merge') // using the destructuring in the javascript
 const upload = multer({ dest: 'uploads/' })
 const app = express()
 const port = 3000
@@ -12,17 +12,18 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/templates/index.html'))
 })
 
-app.get('/pdfviewer', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '/public/merged.pdf'))
-})
+// app.get('/pdfviewer', (req, res, next) => {
+//     res.sendFile(path.join(__dirname, '/public/merged.pdf'))
+// })
 
 app.post('/merge', upload.array('pdfs', 100), async (req, res, next) => {
     let arrayOfFiles = req.files
     // console.log(req.files);
+    let d;
     for (let i of arrayOfFiles) {
-        await mergedpdfs(path.join(__dirname, i.path))
+        d = await mergedpdfs(path.join(__dirname, i.path))
     }
-    res.redirect('http://localhost:3000/pdfviewer')
+    res.sendFile(path.join(__dirname, `/public/${d}.pdf`))
     // res.redirect("http://localhost:3000/static/merged.pdf")
     // res.send({ data: req.files })
 })
