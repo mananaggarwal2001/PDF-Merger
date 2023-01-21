@@ -49,15 +49,16 @@
         </div>
     </nav>
     <div class="container fileDivClass">
-        <form method="post" action="/merge" enctype="multipart/form-data">
-            <h1>PDFX Your Favourite PDF Merger Tool</h1>
-            <div class="form-group">
-                <div>
-                    <label for="fileId" id="file" class="pdfbuttontitleClass">Select PDF Files</label>
+        <form method="post" class="formClass" action="/merge" enctype="multipart/form-data">
+            <h1 class="headingClassForPdfMerger">Merge PDF Online</h1>
+            <div class="form-group formclass">
+                <p>Combine PDFs in the order you want with the easiest PDF merger available.</p>
+                <div class="labelAndInputFileClass">
+                    <label for="fileId" id="file" class="pdfbuttontitleClass">Select PDF files</label>
                     <input type="file" class="fileChooseClass" id="fileId" accept=".pdf" multiple
                          name="pdfs" value="Choose PDFs File">
                 </div>
-                <button type="submit" class="btn btn-primary my-3">Submit</button>
+                <button type="submit" class="btn btn-primary my-3 submitButtonClass">Submit</button>
             </div>
         </form>
     </div>
