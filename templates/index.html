@@ -48,13 +48,15 @@
             </form>
         </div>
     </nav>
-    <div class="container">
+    <div class="container fileDivClass">
         <form method="post" action="/merge" enctype="multipart/form-data">
             <h1>PDFX Your Favourite PDF Merger Tool</h1>
             <div class="form-group">
-                <label for="exampleFormControlFile1">Select the pdf file you want to merge</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" accept=".pdf" multiple
-                    name="pdfs">
+                <div>
+                    <label for="fileId" id="file" class="pdfbuttontitleClass">Select PDF Files</label>
+                    <input type="file" class="fileChooseClass" id="fileId" accept=".pdf" multiple
+                         name="pdfs" value="Choose PDFs File">
+                </div>
                 <button type="submit" class="btn btn-primary my-3">Submit</button>
             </div>
         </form>

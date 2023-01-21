@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* File div Class in the given class */
+body {
+    background-color: grey;
+}
+.fileDivClass {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(195, 191, 191);
+    position: relative;
+    top: 150px;
+    border: 3px solid black;
+    border-radius: 10%;
+    width: 400px;
+    overflow: hidden;
+}
+
+.pdfbuttontitleClass{
+    position: relative;
+    top:80px;
+    left:80px;
+    /* visibility:hidden; */
+    font-size: 200%;
+    /* background-color: blue; */
+    cursor: pointer;
+    color:white;
+    font-weight: 500;
+}
+
+input#fileId {
+    /* display: inline-block; */
+    width: 100%;
+    padding: 100px 0 0 0;
+    height: 50px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: red;
+    /* background: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png') center center no-repeat #e4e4e4; */
+    border-radius: 20px;
+    background-size: 60px 60px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+#file{
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+}

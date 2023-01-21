@@ -24,18 +24,19 @@ app.post('/merge', upload.array('pdfs', 100), async (req, res, next) => {
     for (let i of arrayOfFiles) {
         d = await mergedpdfs(path.join(__dirname, i.path))
     }
-    res.sendFile(path.join(__dirname, `/public/${d}.pdf`), (err) => {
+    res.sendFile(path.join(__dirname, `/public/mergedFolder/${d}.pdf`), (err) => {
         console.log(err); // if the error is thrown in the given function which the file being not able to send..
     })
 
-    fs.readdir('./public', (err, files) => {
+    fs.readdir('./public/mergedFolder', (err, files) => {
         // console.log(files); // this will give me list of files in the form of the array.
         for (let file of files) {
-            fs.unlink(path.join(__dirname, `/public/${file}`), err => {
+            fs.unlink(path.join(__dirname, `/public/mergedFolder/${file}`), err => {
                 if (err) {
                     console.log(err);
                 }
             })
+
         }
     })
     fs.readdir('./uploads', (err, files) => {
