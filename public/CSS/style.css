@@ -1,54 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
     padding: 0;
     margin: 0;
 }
 
-.formclass{
+body{
+    background-color: rgb(230, 228, 228);
+}
 
+.formclass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .submitButtonClass{
     margin:auto;
     display: flex;
-    width:25%;
+    width:10%;
     align-items: center;
     justify-content: center;
     font-size: 20px;
     font-weight: bolder;
 }
-
+.headingClassParagraphClass{
+    width:100%;
+    margin-top: 1%;
+    /* margin:auto; */
+    /* align-items: center; */
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
 .headingClassForPdfMerger{
-    margin:10px 72px;
+    margin-left: 35%;
+    width:75%;
     align-items: center;
     justify-content: center;
 }
-
 
 /* File div Class in the given class */
 .fileDivClass {
     /* margin: auto; */
-    display: flex;
+    display: inline;
+    width:100px;
     align-items: center;
     justify-content: center;
     /* background-color: rgb(195, 191, 191); */
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.paragraphClass{
+    display: block;
+    margin:0px;
+    font-size: 140%;
+    margin-left:15%;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: center;
 }
 
 .pdfbuttontitleClass{
-    position: relative;
+    /* position: relative;
     top:80px;
-    left:80px;
+    left:80px; */
     /* visibility:hidden; */
-    font-size: 30px;
+    margin:0;
+    display: flex;
+    position: relative;
+    top:3.8rem;
+    flex-wrap: wrap;
+    right: 0.5%;
+    font-size: 200%;
+    /* align-items: center; */
+    position: relative;
+    justify-content: center;
     /* background-color: blue; */
     cursor: pointer;
-    color:white;
+    color:rgb(255, 255, 255);
     font-weight: 500;
 }
 input#fileId {
-    /* display: inline-block; */
-    width: 100%;
-    padding: 100px 0 0 0;
+    display: flex;
+    width: 30%;
+    padding: 75px 0 0 0;
     height: 50px;
     overflow: hidden;
     -webkit-box-sizing: border-box;
@@ -56,11 +91,12 @@ input#fileId {
     box-sizing: border-box;
     background-color: red;
     /* background: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png') center center no-repeat #e4e4e4; */
-    border-radius: 20px;
+    border-radius: 10px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
-.labelAndInputFileClass{
-    width:75%;
-    height: 150px;
-    margin:auto;
+#fileId:hover{
+    background-color: rgb(166, 8, 8);
 }
