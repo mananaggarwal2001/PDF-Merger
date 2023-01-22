@@ -9,4 +9,8 @@
 4. path: ^0.12.
 5. pdf-merger-js: ^4.2.0
 ```
-## Steps to use this Project for own use
+## Steps to use this Project for your own use
+1. **Clone this project using the command**
+```dotnetcli
+git clone https://github.com/mananaggarwal2001/PDF-Merger.git
+```
