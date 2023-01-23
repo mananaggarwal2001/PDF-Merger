@@ -1,5 +1,5 @@
 # PDF MERGER
-### This is the simple pdf merger using the knowledge of the frontEnd and the backEnd
+### This is the simple pdf merger using the knowledge of the frontEnd and the backEnd in web development
 
 ## Dependencies used
 ```
@@ -9,7 +9,7 @@
 4. path: ^0.12.
 5. pdf-merger-js: ^4.2.0
 ```
-## Steps to use this Project for your own use
+## Steps to use this project for your own use
 1. **Clone this project using the command**
 ```dotnetcli
 git clone https://github.com/mananaggarwal2001/PDF-Merger.git

@@ -53,9 +53,10 @@ body{
 .paragraphClass{
     display: block;
     margin:0px;
-    font-size: 140%;
+    font-size: 160%;
     margin-left:15%;
     font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
     align-items: center;
     justify-content: center;
 }
