@@ -14,3 +14,21 @@
 ```dotnetcli
 git clone https://github.com/mananaggarwal2001/PDF-Merger.git
 ```
+2. **Now install the necessasry packages using the command**
+
+```dotnetcli
+npm init
+```
+**Note :- Make Sure that you have the node JS Package installed in your computer.**
+
+3. **For Starting the Server Run the command**
+
+```dotnetcli
+node server.js
+```
+4. **Now go to any browser and write the link**
+
+```dotnetcli
+http://localhost:3000
+```
+Then your website will be served on the browser and you can use it as the real project to download the Merged PDFs of any number of the PDFs that you will supply to the server.
